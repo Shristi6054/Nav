@@ -1,5 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Link, Routes ,Route } from 'react-router-dom';
+import Home from './navlinks/Home';
+import About from './navlinks/About';
+import Gallery from './navlinks/Gallery';
+import Contact from './navlinks/Contact';
 import { FaFacebook } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
@@ -24,10 +28,10 @@ function App() {
         </div>
         
         <Routes>
-          <Route exact path='/' />
-          <Route path='/about' />
-          <Route path='/gallery' />
-          <Route path='/contact' />
+          <Route exact path='/' Component={Home}/>
+          <Route path='/about' Component={About}/>
+          <Route path='/gallery' Component={Gallery}/>
+          <Route path='/contact' Component={Contact}/>
         </Routes>
 
         <div className='footer'>
